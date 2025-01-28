@@ -4,6 +4,29 @@ layout: default
 <html>
   <head> 
     <title>Home Page</title> 
+    <link rel=stylesheet type="text/css" href="css/layout.css">
+    <script src="js/myscripts.js"></script>  
   </head>
-  <body> Welcome to Repo Depot!!!</body>
+  <body> Welcome to Repo Depot!!!
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="RestAPI" class="tabcontent">
+  <h3>RestAPI</h3>
+  <p>Let us understand the basics of RestfulAPIs</p>
+</div>
+
+<div id="MachineLearning" class="tabcontent">
+  <h3>Machine Learning</h3>
+  <p>Fundamentals of Supervised, Unsupervised and Reinforcement Learning</p>
+</div>
+
+<div id="LLM" class="tabcontent">
+  <h3>Large Language Model</h3>
+  <p> A deep dive into Large Language Models</p>
+</div>
+  </body>
 </html>
