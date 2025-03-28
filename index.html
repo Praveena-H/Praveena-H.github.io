@@ -12,7 +12,7 @@ layout: default
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'RestAPI')">Restful API</button>
       <button class="tablinks" onclick="openTab(event, 'MachineLearning')">Machine Learning</button>
-      <button class="tablinks" onclick="openTab(event, 'LLM')">Large Language Model</button>
+      <button class="tablinks" onclick="openTab(event, 'TextSum')">Text Summary</button>
     </div>
     
     <div id="RestAPI" class="tabcontent">
@@ -25,9 +25,26 @@ layout: default
       <p>Fundamentals of Supervised, Unsupervised and Reinforcement Learning</p>
     </div>
     
-    <div id="LLM" class="tabcontent" style ="display:none">
-      <h3>Large Language Model</h3>
-      <p> A deep dive into Large Language Models</p>
+    <div id="TextSum" class="tabcontent" style ="display:none">
+      <h3>Text Summarization</h3>
+      <p> Type in your text to be summarized</p>
+      <div class="container">
+        <div class="text-area-container">
+            <textarea id="inputText" placeholder="Enter original text..."></textarea>
+            <textarea id="outputText" placeholder="Summarized text..." readonly></textarea>
+        </div>
+        <button onclick="summarizeText()">Summarize</button>
+    </div>
+    
+    <script>
+        function summarizeText() {
+            let input = document.getElementById("inputText").value;
+            let output = document.getElementById("outputText");
+            
+            // Placeholder logic: Shorten the text to first 50 characters
+            output.value = input.length > 50 ? input.substring(0, 50) + "..." : input;
+        }
+    </script>
     </div>
   </body>
 </html>
